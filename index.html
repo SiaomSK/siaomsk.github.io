@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siaom_SK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            min-height: 100vh;
+            color: white;
+        }
 
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .link-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .profile-ring {
+            position: relative;
+        }
+
+        .profile-ring::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f43f5e, #8b5cf6, #3b82f6);
+            z-index: -1;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center p-6 sm:p-12">
+
+    <!-- Profilová sekcia -->
+    <div class="flex flex-col items-center mb-8">
+        <div class="profile-ring w-24 h-24 mb-4">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Siaom_SK" alt="Profilová fotka" class="w-full h-full rounded-full bg-slate-800 p-1">
+        </div>
+        <h1 class="text-2xl font-bold mb-1">Siaom_SK</h1>
+        <p class="text-slate-400 text-sm">Gaming</p>
+    </div>
+
+    <!-- Najnovšie video -->
+    <div class="w-full max-w-md mb-8">
+        <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-3 px-2">Najnovšie video</h2>
+        <div class="glass p-3 rounded-2xl">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xloIs61zd_8?si=AzVhhJxEj0QzG7Pl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekcia odkazov -->
+    <div class="w-full max-w-md space-y-4">
+        
+        <a href="https://www.youtube.com/@Siaom_SK/" target="_blank" class="link-card glass flex items-center p-4 rounded-xl">
+            <div class="bg-red-500/20 p-2 rounded-lg mr-4 text-red-500">
+                <i data-lucide="youtube"></i>
+            </div>
+            <div class="flex-grow">
+                <p class="font-semibold">Odoberaj na YouTube</p>
+            </div>
+            <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+        </a>
+
+        <a href="#" target="_blank" class="link-card glass flex items-center p-4 rounded-xl">
+            <div class="bg-blue-500/20 p-2 rounded-lg mr-4 text-blue-400">
+                <i data-lucide="camera"></i>
+            </div>
+            <div class="flex-grow">
+                <p class="font-semibold">Moje Príslušenstvo</p>
+            </div>
+            <i data-lucide="shopping-cart" class="w-4 h-4 text-slate-500"></i>
+        </a>
+
+        <a href="#" target="_blank" class="link-card glass flex items-center p-4 rounded-xl">
+            <div class="bg-indigo-500/20 p-2 rounded-lg mr-4 text-indigo-500">
+                <i data-lucide="message-square"></i>
+            </div>
+            <div class="flex-grow">
+                <p class="font-semibold">Discord Komunita (Zatiaľ neni)</p>
+            </div>
+            <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+        </a>
+
+    </div>
+
+    <!-- Vycentrovaný Footer -->
+    <div class="flex flex-col items-center mt-12 mb-8 space-y-6">
+        <div class="flex justify-center space-x-8 text-slate-400">
+            <a href="#" class="hover:text-white transition-colors transform hover:scale-110"><i data-lucide="twitter"></i></a>
+            <a href="#" class="hover:text-white transition-colors transform hover:scale-110"><i data-lucide="twitch"></i></a>
+            <a href="#" class="hover:text-white transition-colors transform hover:scale-110"><i data-lucide="facebook"></i></a>
+            <a href="#" class="hover:text-white transition-colors transform hover:scale-110"><i data-lucide="github"></i></a>
+        </div>
+        
+        <div class="text-center">
+            <p class="text-xs text-slate-500 font-medium tracking-wide">© 2026 Siaom_SK</p>
+            <p class="text-[10px] text-slate-600 mt-1">Všetky práva vyhradené</p>
+        </div>
+    </div>
+
+    <script>
+        // Inicializácia ikoniek Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
