@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Príslušenstvo | Siaom_SK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="p-6 sm:p-12 flex flex-col items-center">
+
+    <div class="w-full max-w-2xl flex items-center mb-10">
+        <a href="../" class="p-2 glass rounded-lg mr-4 hover:bg-white/10 transition-colors">
+            <i data-lucide="arrow-left"></i>
+        </a>
+        <h1 class="text-2xl font-bold">Moje Príslušenstvo</h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+        
+        <!-- Produkt 1: Myš -->
+        <a href="https://www.lexip.co/en/products/wired-mouse-assassins-creed-shadows" target="_blank" class="product-card glass p-5 rounded-2xl flex flex-col">
+            <div class="w-full aspect-square rounded-xl bg-slate-800/50 mb-4 flex items-center justify-center">
+                <img src="https://www.lexip.co/cdn/shop/files/Souris-vue-2-1.jpg?v=1753799106&width=1000">
+            </div>
+            <h3 class="font-bold text-lg mb-1 text-white">Lexip Assassin's Creed Shadows Káblová Myš</h3>
+            <p class="text-sm text-slate-400 flex-grow mb-4">Assassin's Creed Shadows Wired Mouse - Thumbstick and Ceramic Skates - Lexip X Ubisoft</p>
+            <div class="flex items-center justify-between text-blue-400 font-bold text-sm">
+                <span>Kúpiť / Pozrieť</span>
+                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            </div>
+        </a>
+
+        <!-- Produkt 2: Klávesnica -->
+        <a href="https://whiteshark.gg/keyboards/shinobi-black-red-switches" target="_blank" class="product-card glass p-5 rounded-2xl flex flex-col">
+            <div class="w-full aspect-square rounded-xl bg-slate-800/50 mb-4 flex items-center justify-center">
+                <img src="https://smit-electronic.s3.eu-central-1.amazonaws.com/96192f32-f6f3-48f9-a241-1fcb27058a0c/conversions/1-thumb.png">
+            </div>
+            <h3 class="font-bold text-lg mb-1 text-white">Whiteshark SHINOBI</h3>
+            <p class="text-sm text-slate-400 flex-grow mb-4">Whiteshark SHINOBI Black - Red switches</p>
+            <div class="flex items-center justify-between text-blue-400 font-bold text-sm">
+                <span>Kúpiť / Pozrieť</span>
+                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            </div>
+        </a>
+
+        <!-- Produkt 3: Mikrofón -->
+        <a href="https://niceboy.eu/sk/produkty/hive-prodigy-4-black" target="_blank" class="product-card glass p-5 rounded-2xl flex flex-col">
+            <div class="w-full aspect-square rounded-xl bg-slate-800/50 mb-4 flex items-center justify-center">
+                <img src="https://niceboy.eu/files/produkt//hive-prodigy-4-black/hive-prodigy-4-gallery-01.jpg">
+            </div>
+            <h3 class="font-bold text-lg mb-1 text-white">Niceboy HIVE Prodigy 4 Black</h3>
+            <p class="text-sm text-slate-400 flex-grow mb-4">Niceboy HIVE Prodigy 4 Black Onyx</p>
+            <div class="flex items-center justify-between text-blue-400 font-bold text-sm">
+                <span>Kúpiť / Pozrieť</span>
+                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            </div>
+        </a>
+
+        <a href="https://www.lunarclient.com/" target="_blank" class="product-card glass p-5 rounded-2xl flex flex-col">
+            <div class="w-full aspect-square rounded-xl bg-slate-800/50 mb-4 flex items-center justify-center">
+                <img src="https://dashboard.snapcraft.io/site_media/appmedia/2025/12/icon_lpeXp78.png">
+            </div>
+            <h3 class="font-bold text-lg mb-1 text-white">Lunar Client</h3>
+            <p class="text-sm text-slate-400 flex-grow mb-4">(Nie je reklama)</p>
+            <div class="flex items-center justify-between text-blue-400 font-bold text-sm">
+                <span>Pozrieť</span>
+                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <footer class="mt-12 mb-8 text-center">
+        <p class="text-xs text-slate-500">Niektoré odkazy môžu byť partnerské (affiliate).</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
